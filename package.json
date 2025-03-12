@@ -1,6 +1,6 @@
 {
   "name": "react-contact-form",
-  "homepage": "https://github.com/SvitlanaTsupryk-jul18.github.io/react-contact-form",
+  "homepage": "https://SvitlanaTsupryk-jul18.github.io/react-contact-form",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,9 +13,11 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
     "gh-pages": "^6.3.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
