@@ -76,10 +76,10 @@ const Header = () => {
           </NavLink>
         </div>
         <div className="header-user">
-          <Link to="/login" target="_blank">
+          <Link to="/login">
             <img src={userLogo} className="user-logo" alt="User logo" />
           </Link>
-          <Link to="/cart" target="_blank">
+          <Link to="/cart">
             <img src={cartLogo} className="user-logo" alt="User logo" />
           </Link>
         </div>

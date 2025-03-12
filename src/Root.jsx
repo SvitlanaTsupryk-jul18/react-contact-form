@@ -16,20 +16,20 @@ import Cart from "./pages/Cart";
 import Feature from "./pages/Feature";
 
 export const Root = () => (
-  <Router>
+  <Router basename="/react-contact-form">
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
-        <Route path="/home" element={<Navigate to=".." replace={true} />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/feature1" element={<Feature />} />
-        <Route path="/feature2" element={<Feature />} />
-        <Route path="/*" element={<PageNotFound />} />
+        <Route path="home" element={<Navigate to=".." replace={true} />} />
+        <Route path="blog" element={<Blog />} />
+        <Route path="shop" element={<Shop />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="login" element={<Login />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="feature1" element={<Feature />} />
+        <Route path="feature2" element={<Feature />} />
+        <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>
   </Router>
