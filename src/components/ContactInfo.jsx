@@ -34,13 +34,25 @@ const ContactInfo = () => {
         </a>
       </div>
       <div className="contact-socials">
-        <a href="https://twitter.com/" className="contact-social" target="_blank">
+        <a
+          href="https://twitter.com/"
+          className="contact-social"
+          target="_blank"
+        >
           <img className="open-icon" src={twitter} />
         </a>
-        <a href="https://instagram.com/" className="contact-social" target="_blank">
+        <a
+          href="https://instagram.com/"
+          className="contact-social"
+          target="_blank"
+        >
           <img className="open-icon" src={instagram} />
         </a>
-        <a href="https://discord.com/" className="contact-social" target="_blank">
+        <a
+          href="https://discord.com/"
+          className="contact-social"
+          target="_blank"
+        >
           <img className="open-icon" src={discord} />
         </a>
       </div>

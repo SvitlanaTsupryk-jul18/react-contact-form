@@ -20,7 +20,7 @@ const Input = ({
   };
   return (
     <div className={error ? "error input-wrapper" : "input-wrapper"}>
-      <label htmlFor={label} className={isFocused ? "focused" : ""}>
+      <label htmlFor={label} className={isFocused || value ? "focused" : ""}>
         {label}
       </label>
       <input

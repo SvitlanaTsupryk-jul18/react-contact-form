@@ -20,7 +20,6 @@ function FormContact() {
       ...values,
       [name]: value,
     });
-    console.log(e.target.name, value, values);
   };
 
   const validate = () => {
@@ -78,12 +77,45 @@ function FormContact() {
         message: "",
       });
       setErrors({});
+
       // You can pass formData as a fetch body directly:
-      // const formJson = Object.fromEntries(formData.entries());
-      // fetch('/some-api', { method: form.method, body: formJson });
+      //Examlpe:
+      // postData("https://example.com/api/submit", values)
+      //   .then((response) => {
+      //     if (response.ok) {
+      //       console.log("Form submitted successfully:", values);
+      //       setSubmitted(true);
+      //       setValues({
+      //         firstName: "",
+      //         lastName: "",
+      //         email: "",
+      //         phone: "",
+      //         subject: "General Inquiry1",
+      //         message: "",
+      //       });
+      //       setErrors({});
+      //     } else {
+      //       return response.json().then((data) => {
+      //         throw new Error(data.message || "Something went wrong");
+      //       });
+      //     }
+      //   })
+      //   .catch((error) => {
+      //     console.log("Failde form submittion", values);
+      //   });
     } else {
       setErrors(validationErrors);
     }
+  };
+
+  const postData = (url, data) => {
+    return fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
   };
 
   return (
