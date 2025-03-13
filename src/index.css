@@ -29,11 +29,36 @@ li {
   max-width: 1200px;
   margin-top: 80px;
 }
+
+h1 {
+  font-size: 24px;
+  padding: 40px 0 10px;
+  text-align: center;
+}
+h1 + p {
+  font-size: 14px;
+  color: #717171;
+  padding: 0 100px 20px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 60px;
+    padding-bottom: 10px;
+  }
+  h1 + p {
+    font-size: 18px;
+    padding-bottom: 50px;
+  }
+}
+
 /* header */
 
 header {
   padding-top: 80px;
   transition: all 0.2s;
+  background: #f5f5f5;
 }
 header.open {
   background: black;
@@ -137,7 +162,6 @@ nav {
 .nav-features .nav-list {
   display: none;
 }
-
 .nav-features svg {
   display: inline-block;
   margin-left: 5px;
@@ -146,7 +170,6 @@ nav {
 .nav-features svg path {
   fill: white;
 }
-
 .header-user {
   display: flex;
   margin: auto;
@@ -225,7 +248,7 @@ nav {
   nav {
     position: static;
     flex-direction: row;
-    width: 55%;
+    width: 70%;
     justify-content: space-between;
     padding: 0;
     background: none;
@@ -265,7 +288,7 @@ nav {
   .nav-list {
     display: none;
     position: absolute;
-    left: -25px;
+    left: 0;
     top: 100%;
     width: 110px;
     background: #f5f5f5;
@@ -288,5 +311,274 @@ nav {
   }
   .header-user a:hover img {
     filter: invert(1);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  nav {
+    width: 55%;
+  }
+}
+
+/* contact page */
+
+.contact-wrapper {
+  background: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 50px;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  border-bottom-right-radius: 0;
+  background: url("./assets/bg-mob.svg") right bottom no-repeat black;
+  text-align: center;
+  padding: 25px 45px;
+}
+.contact-info h2 {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 6px;
+}
+.contact-info h2 + p {
+  color: #c9c9c9;
+  font-size: 11px;
+  padding-bottom: 12px;
+  padding-bottom: 20px;
+}
+.contact-social,
+.contact-link {
+  display: block;
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+}
+.contact-link img {
+  transition: all 0.3s;
+}
+.contact-link:hover img {
+  transform: scale(1.2);
+}
+.contact-link {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 15px;
+}
+.contact-link:last-child {
+  padding-bottom: 0;
+}
+.contact-link img {
+  padding-bottom: 10px;
+}
+.contact-link img,
+.contact-link span {
+  display: block;
+}
+.contact-socials {
+  display: flex;
+  gap: 0 24px;
+  padding-top: 60px;
+}
+.contact-social {
+  transition: all 0.3s;
+}
+.contact-social:hover {
+  filter: invert(1);
+}
+
+@media only screen and (min-width: 1024px) {
+  .contact-wrapper {
+    display: flex;
+  }
+  .contact-info {
+    width: 40%;
+    flex-shrink: 0;
+    background: url("./assets/bg.svg") right bottom no-repeat black;
+    align-items: start;
+    justify-content: space-between;
+    text-align: left;
+    padding: 40px;
+  }
+  .contact-info h2 {
+    font-size: 28px;
+  }
+  .contact-info h2 + p {
+    font-size: 18px;
+  }
+  .contact-link {
+    flex-direction: row;
+    font-size: 16px;
+    padding-bottom: 50px;
+  }
+  .contact-link img {
+    padding-bottom: 0;
+    margin-right: 25px;
+  }
+}
+/* form */
+
+.form-wrapper {
+  padding: 30px 15px 60px;
+  position: relative;
+  background: url("./assets/letter.svg") bottom -20px right 140px no-repeat;
+  margin-top: 0;
+}
+.input-wrapper {
+  position: relative;
+}
+.input-wrapper label {
+  font-size: 12px;
+  color: #8d8d8d;
+  padding-bottom: 5px;
+}
+.input-wrapper label.focused {
+  color: black;
+}
+.input {
+  border: none;
+  border-bottom: 1px solid #8d8d8d;
+  background: none;
+  width: 100%;
+  padding-bottom: 10px;
+  color: #8d8d8d;
+  font-size: 14px;
+  margin-bottom: 20px;
+  appearance: none;
+}
+.error .input {
+  border-bottom-color: darkblue;
+}
+.input:focus {
+  outline: none;
+  border-bottom-color: #8d8d8d;
+  color: black;
+}
+.input-error {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  color: black;
+  font-size: 10px;
+}
+.form-radio h3 {
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+.radio-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+}
+.radio-container {
+  width: calc(50% - 10px);
+}
+.radio-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.radio-input {
+  display: none;
+}
+.radio-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.radio-icon {
+  margin-right: 10px;
+  background: #e0e0e0;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+}
+.radio-icon img {
+  display: block;
+}
+.radio-text {
+  font-size: 12px;
+}
+.form-message {
+  padding: 15px 0 5px;
+}
+form .btn {
+  display: block;
+  padding: 10px 30px;
+  width: 100%;
+  max-width: 500px;
+  background: black;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+form .btn:hover {
+  background-color: #616161;
+}
+.success-msg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  z-index: 2;
+  background: white;
+}
+
+@media only screen and (min-width: 767px) {
+  .form-wrapper {
+    padding: 60px 50px;
+  }
+  .form-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 40px;
+  }
+  .input-wrapper {
+    width: calc(50% - 20px);
+  }
+  .input {
+    margin-bottom: 45px;
+  }
+  .radio-wrapper {
+    align-items: start;
+  }
+  .radio-container {
+    width: fit-content;
+    margin-bottom: 0;
+  }
+  .form-message {
+    padding: 45px 0 0;
+  }
+  form .btn {
+    padding: 15px 45px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .form-wrapper {
+    padding-bottom: 150px;
+    background-size: 250px;
+    background-position: bottom -45px right 120px;
   }
 }

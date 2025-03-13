@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; URL=./index.html">
+    <script>
+      // This script will redirect all 404 requests to the index.html
+      var pathname = window.location.pathname;
+      var basename = "/react-contact-form";
+      window.location.replace(basename + "/index.html?redirect=" + pathname);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
